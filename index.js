@@ -1,38 +1,40 @@
 const express = require("express");
 const app = express();
 
-
-app.use(express.static(__dirname + "/public"));
-
-// Task 1: Set the view engine to EJS. 
+// Task 0: Create the public and views folders and move the correct files into place
+// Task 1: Set up the static files middleware
 
 
-
-
-
-// Task 2: Create a folder called views. Move home.ejs into views. 
-
-app.get('/', (req, res) => {
-
-  // Task 3: Create an object called data, with 3 properties
-  // "name", with a name for your supermarket (String)
-  // "open", with a boolean to show whether the store is open or not
-  // "stock", an array with at least 3 items (Strings)
+// Task 2: Set up a route handler for / that sends back index.html
 
 
 
 
+// Task 3: Set the view engine to EJS. 
 
 
-  // Task 4: return the response, have it render home.ejs with your data object. 
+// Task 4: Set up a route handler for /student/1 that...
+
+  // ...creates an object called student with the following properties
+  // "name" (string)
+  // "advisory" (string)
+  // "imageUrl" (string)
+  // "funFact" (string)
+  
+
+  // ...and sends back student.ejs with the data object
+
+
+// Task 5: Set up a route handler for /student/2 that serves a DIFFERENT student using the same template
+
+
+// EXTRA CREDIT
+// Task 6: Try to write your own teacher.ejs template that sends back a slightly different info for a teacher (e.g. classes, department)
+// Task 7: Set up a route handlers for /teacher/1 and /teacher/2 that use your new template!
 
 
 
 
-
-
-  // Continue Task 5 in home.ejs
+app.listen(3000, ()=>{
+  console.log("Server is running")
 });
-
-
-app.listen();
